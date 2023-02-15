@@ -97,10 +97,12 @@ A <- get.adjacency(MST, sparse = F)
 # ver las aristas que hay entre los nodos
 head(A)
 
-#Exportar resultados para cytoscape o gephi
+#Exportar 
 #VER LAS ARISTAS(PESOS)
 #nodos n-1
 write.graph(MST,file="g.gml", format="gml")
 #Formato legible para cualquier paquetería especializada
 #Se guarda en la carpeta específica
 
+#Exportar resultados para cytoscape o gephi
+write.csv(A, file="Adyacentes.csv")
